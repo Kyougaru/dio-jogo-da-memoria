@@ -16,7 +16,15 @@ body {
     overflow: hidden;
 }
 
-.wave-background .wave {
+.background img {
+    position: fixed;
+    bottom: -30px;
+    left: 45px;
+    width: 30%;
+    z-index: -5;
+}
+
+.background .wave {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -26,36 +34,36 @@ body {
     background-size: 1000px 100px;
 }
 
-.wave-background .wave.wave1 {
+.background .wave.wave1 {
     animation: wave 30s linear infinite;
     z-index: -1;
-    opacity: 1;
+    filter: brightness(1);
     animation-delay: 0s;
     bottom: 0;
 }
 
-.wave-background .wave.wave2 {
+.background .wave.wave2 {
     animation: wave 15s linear infinite reverse;
     z-index: -2;
-    opacity: 0.5;
+    filter: brightness(0.7);
     animation-delay: -5s;
-    bottom: 10px;
+    bottom: 20px;
 }
 
-.wave-background .wave.wave3 {
+.background .wave.wave3 {
     animation: wave 30s linear infinite;
     z-index: -3;
-    opacity: 0.2;
+    filter: brightness(0.5);
     animation-delay: -2s;
-    bottom: 15px;
+    bottom: 50px;
 }
 
-.wave-background .wave.wave4 {
+.background .wave.wave4 {
     animation: wave 15s linear infinite reverse;
     z-index: -4;
-    opacity: 0.7;
+    filter: brightness(0.3);
     animation-delay: -2s;
-    bottom: 20px;
+    bottom: 80px;
 }
 
 @keyframes wave {
