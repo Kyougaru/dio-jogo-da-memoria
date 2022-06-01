@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let misses = 0;
 
 function flipCard() {
     if(lockBoard) return;
@@ -35,6 +36,7 @@ function disableCards() {
 
 function unflipCards() {
     lockBoard = true;
+    document.getElementById('misses').innerHTML = ++misses;
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
