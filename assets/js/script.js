@@ -49,12 +49,26 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
+function newGame() {
+    lockBoard = true;
+    cards.forEach((cards) => {
+        cards.classList.remove('flip');
+        cards.addEventListener('click', flipCard);
+    });
+    misses = 0;
+    document.getElementById('misses').innerHTML = misses;
+    resetBoard();
+    shuffle();
+}
+
+function shuffle() {
     cards.forEach((card) => {
         let randomPosition = Math.floor(Math.random() * 12);
         card.style.order = randomPosition;
     })
-})();
+}
+
+shuffle();
 
 cards.forEach((cards) => {
     cards.addEventListener('click', flipCard);
