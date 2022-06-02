@@ -22,9 +22,11 @@ body {
 }
 
 .misses-wrapper {
+    position: relative;
     color: white;
     text-shadow: -1px -1px black, 1px -1px black, -1px 1px black, 1px 1px black;
-    margin: 1rem 0;
+    left: 10px;
+    top: 10px;
 }
 
 .game-wrapper button {
@@ -115,7 +117,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    margin: 0 0 1rem;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 100px;
 }
 
 .card {
@@ -156,7 +161,17 @@ body {
         height: 340px;
         width: 340px;
     }
+
     .background img {
         width: 50vh;
+    }
+
+    .game-wrapper button {
+        position: relative;
+        bottom: 30px;
+    }
+
+    .misses-wrapper {
+        margin-bottom: 20px;
     }
 }
