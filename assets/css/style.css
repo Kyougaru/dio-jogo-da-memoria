@@ -152,7 +152,7 @@ body {
 
 @media (max-width: 800px) {
     .memory-game {
-        height: 340px;
+        height: 440px;
         width: 340px;
     }
     .background img {
